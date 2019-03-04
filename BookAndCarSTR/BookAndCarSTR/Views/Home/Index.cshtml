@@ -1,0 +1,25 @@
+﻿@model  IEnumerable<BookAndCarSTR.Models.Book>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div style="margin-bottom:10px; margin-top:10px; padding:10px" class=" border">
+    <a class="font-weight-bold" href="~/Books/Create">Create New Book</a>
+</div>*@
+<div class="container " style="margin-top:50px;display: flex;">
+    
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" width="120px" src="~/Images/@(item.Image != null ?"Books/"+item.Image:"No_Image.jpg")" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><b>Book Name:</b>@item.Name</h5>
+                <h5 class="card-title"><b>Description:</b>@item.Description</h5>
+                <h5 class="card-title"><b>Author:</b>@item.Author</h5>
+                <h5 class="card-title">@item.Create</h5>
+            </div>
+        </div>
+    }
+</div>

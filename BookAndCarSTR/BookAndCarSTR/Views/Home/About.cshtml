@@ -1,0 +1,27 @@
+﻿@model   IEnumerable< BookAndCarSTR.Models.Car>
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@*<div style="margin-bottom:10px; margin-top:10px; padding:10px" class=" border">
+    <a class="font-weight-bold" href="~/Cars/Create">Create New Car</a>
+</div>*@
+<div class="container" style="display: flex;">
+    
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" width="250px" src="~/Images/@(item.Image != null ?"Cars/"+item.Image:"No_Image.jpg")" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><b>Brand:</b> @item.BrandName      <b> Model: </b>@item.ModelName</h5>
+                <h5 class="card-title"><b>Description:</b> @item.Description</h5>
+                <h5 class="card-title"><b>Motor Type :</b>@item.MotorType    <b>Mile Age :</b>@item.MileAge <b>MILE</b></h5>
+                <h5 class="card-title">@item.Create</h5>
+            </div>
+        </div>
+    }
+</div>

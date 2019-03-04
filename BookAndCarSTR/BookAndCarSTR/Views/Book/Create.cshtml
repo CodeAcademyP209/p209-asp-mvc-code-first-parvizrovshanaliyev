@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Blank Page</li>
+    </ol>
+    <!-- Page Content -->
+
+    <form action="/Book/Create" enctype="multipart/form-data" method="post" class="col-md-8">
+        <div class="form-group">
+            <label for="name">Book Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Book name" name="Name">
+        </div>
+        <div class="form-group">
+            <label for="desc">Book Description:</label>
+            <textarea class="form-control" id="desc" name="Description" rows="15"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="year">Book Year:</label>
+            <input type="text" class="form-control" id="year" placeholder="Year" name="Year">
+        </div>
+        <div class="form-group">
+            <label for="price">Book Price:</label>
+            <input type="text" class="form-control" id="price" placeholder="Price" name="Price">
+        </div>
+        <div class="form-group">
+            <label for="Author">Book Author:</label>
+            <input type="text" class="form-control" id="author" placeholder="Author" name="Author">
+        </div>
+        <div class="form-group">
+            <label for="date">Book Add Date</label>
+            <input type="date" class="form-control" id="date" name="Date">
+        </div>
+        <button type="submit" class="btn btn-success">Add New Book</button>
+    </form>
+
+</div>
